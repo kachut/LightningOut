@@ -1,0 +1,36 @@
+<html>
+    <script src="https://cognism--techsuppo.my.salesforce.com/lightning/lightning.out.js"></script>
+
+    <div data-lightning-out="true"></div>
+
+    <script>
+        const appName = "c:WebToCaseLightningOut";
+        const componentName = "c:webToCase";
+        const lightningEndpoint = "https://techsuppo-testlivechat.cs126.force.com/LightningOut";
+        const targetElement = document.querySelector("[data-lightning-out]");
+        const componentAttributes = {};
+
+
+        try{
+            $Lightning.use(
+            appName,
+            function(){
+                $Lightning.createComponent(
+                    componentName,
+                    componentAttributes,
+                    targetElement,
+                    function(cmp){
+                        console.log("Lightning component created");
+                    }
+                );
+            },
+            lightningEndpoint
+        );
+        }
+        catch(e){
+            console.error(e);
+        }
+
+    </script>
+
+<html>
