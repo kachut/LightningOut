@@ -8,7 +8,10 @@
         const componentName = "c:webToCase";
         const lightningEndpoint = "https://techsuppo-testlivechat.cs126.force.com/LightningOut";
         const targetElement = document.querySelector("[data-lightning-out]");
-        const componentAttributes = {};
+        const componentAttributes = {
+            recordTypeId = "012580000006IPeAAM",
+            preFormText = 'Some help text on the form - configurable'
+        };
 
         $Lightning.use(
             appName,
@@ -25,5 +28,4 @@
             lightningEndpoint
         );
     </script>
-
 </html>
