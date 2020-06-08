@@ -9,10 +9,14 @@
         const lightningEndpoint = "https://techsuppo-testlivechat.cs126.force.com/LightningOut";
         const targetElement = document.querySelector("[data-lightning-out]");
         const componentAttributes = {
-            recordTypeId : "012580000006IPeAAM",
-            runningUser : 'alexander.crisp@empaua.com',
-            preFormText : 'Some help text on the form - configurable',
-            fileUploadText : undefined
+            recordTypeId: "012580000006IPeAAM",
+            runningUser: "alexander.crisp@empaua.com",
+            preFormText: "Some help text on the form - configurable",
+            fileUploadText: undefined,
+            additionalFields: {
+                Cognism_Office__c : 'UK',
+                Status : 'New'
+            }
         };
 
         $Lightning.use(
