@@ -1,22 +1,18 @@
 <html>
-    <script src="https://cognism--techsuppo.my.salesforce.com/lightning/lightning.out.js"></script>
+    <script src="https://cognism.lightning.force.com/lightning/lightning.out.js"></script>
 
     <div data-lightning-out="true"></div>
 
     <script>
         const appName = "c:WebToCaseLightningOut";
         const componentName = "c:webToCase";
-        const lightningEndpoint = "https://techsuppo-testlivechat.cs126.force.com/LightningOut";
+        const lightningEndpoint = "https://cognismcommunity.force.com/LightningOut";
         const targetElement = document.querySelector("[data-lightning-out]");
         const componentAttributes = {
             recordTypeId: "012580000006IPeAAM",
-            runningUser: "alexander.crisp@empaua.com",
+            runningUser: "william.roberts@empaua.com",
             preFormText: "Some help text on the form - configurable",
-            fileUploadText: undefined,
-            additionalFields: {
-                Cognism_Office__c : 'UK',
-                Status : 'New'
-            }
+            fileUploadText: undefined
         };
 
         $Lightning.use(
