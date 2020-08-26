@@ -1,0 +1,28 @@
+<html>
+    <script src="https://poc-oaf.cs128.force.com/lightning/lightning.out.js"></script>
+
+    <div data-lightning-out="true"></div>
+
+    <script>
+        const appName = "c:applicationPoc";
+        const componentName = "c:applicationDashboard";
+        const lightningEndpoint = "https://poc-oaf.cs128.force.com";
+        const targetElement = document.querySelector("[data-lightning-out]");
+        const componentAttributes = {};
+
+        $Lightning.use(
+            appName,
+            function () {
+                $Lightning.createComponent(
+                    componentName,
+                    componentAttributes,
+                    targetElement,
+                    function (cmp) {
+                        console.log("Lightning component created");
+                    }
+                );
+            },
+            lightningEndpoint
+        );
+    </script>
+</html>
